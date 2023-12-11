@@ -2,10 +2,13 @@
 include_once "Shape.php";
 class Rectangle extends Shape
 {
-    public $width;
-    public $height;
+
+    function __construct(public $width,  public $height)
+    {
+    }
 
     public function calculateArea()
     {
+        return $this->width + $this->height;
     }
 }
